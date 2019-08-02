@@ -12,7 +12,8 @@ pipeline {
         stage('Pull') {
             steps {
                 input message: 'Pull la branche ?'
-                sh 'pwd'
+                sh 'cd /home/lguillaume/Bureau/simple-node-js-react-npm-app'
+                sh 'git pull'
             }
         }
         stage('Build') { 
