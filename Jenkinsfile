@@ -13,6 +13,7 @@ pipeline {
             steps {
                 input message: 'Pull la branche ?'
                 sh 'git pull'
+            }
         }
         stage('Build') { 
             steps {
