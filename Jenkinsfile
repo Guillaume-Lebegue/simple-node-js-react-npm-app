@@ -12,7 +12,7 @@ pipeline {
         stage('Pull') {
             steps {
                 input message: 'Pull la branche ?'
-                sh 'git pull'
+                sh 'pwd'
             }
         }
         stage('Build') { 
