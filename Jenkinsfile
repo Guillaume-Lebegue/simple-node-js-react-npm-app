@@ -9,6 +9,11 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('Pull') {
+            steps {
+                input message: 'Pull la branche ?'
+                sh 'git pull'
+        }
         stage('Build') { 
             steps {
                 sh 'npm install' 
